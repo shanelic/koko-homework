@@ -19,6 +19,9 @@
 		301245EA2B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245E92B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift */; };
 		301245F82B00BF2E00A4CD90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 301245F72B00BF2E00A4CD90 /* SnapKit */; };
 		301245FA2B00BF2E00A4CD90 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */; };
+		301245FC2B00C5BE00A4CD90 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245FB2B00C5BE00A4CD90 /* FriendListViewController.swift */; };
+		301245FE2B00CDBD00A4CD90 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */; };
+		301246032B00D22A00A4CD90 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301246022B00D22A00A4CD90 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		301245E32B00BAEE00A4CD90 /* koko homeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "koko homeworkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		301245E72B00BAEE00A4CD90 /* koko_homeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koko_homeworkUITests.swift; sourceTree = "<group>"; };
 		301245E92B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koko_homeworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		301245FB2B00C5BE00A4CD90 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		301246022B00D22A00A4CD90 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,9 @@
 				301245D12B00BAEE00A4CD90 /* LaunchScreen.storyboard */,
 				301245D42B00BAEE00A4CD90 /* Info.plist */,
 				301245CC2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld */,
+				301245FB2B00C5BE00A4CD90 /* FriendListViewController.swift */,
+				301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */,
+				301246022B00D22A00A4CD90 /* Models.swift */,
 			);
 			path = "koko homework";
 			sourceTree = "<group>";
@@ -272,10 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301245FC2B00C5BE00A4CD90 /* FriendListViewController.swift in Sources */,
 				301245C82B00BAEB00A4CD90 /* ViewController.swift in Sources */,
+				301245FE2B00CDBD00A4CD90 /* FriendListViewModel.swift in Sources */,
 				301245CE2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld in Sources */,
 				301245C42B00BAEB00A4CD90 /* AppDelegate.swift in Sources */,
 				301245C62B00BAEB00A4CD90 /* SceneDelegate.swift in Sources */,
+				301246032B00D22A00A4CD90 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
