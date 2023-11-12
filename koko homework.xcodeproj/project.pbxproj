@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		301245C42B00BAEB00A4CD90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245C32B00BAEB00A4CD90 /* AppDelegate.swift */; };
+		301245C62B00BAEB00A4CD90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245C52B00BAEB00A4CD90 /* SceneDelegate.swift */; };
+		301245C82B00BAEB00A4CD90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245C72B00BAEB00A4CD90 /* ViewController.swift */; };
+		301245CB2B00BAEB00A4CD90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301245C92B00BAEB00A4CD90 /* Main.storyboard */; };
+		301245CE2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 301245CC2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld */; };
+		301245D02B00BAEE00A4CD90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301245CF2B00BAEE00A4CD90 /* Assets.xcassets */; };
+		301245D32B00BAEE00A4CD90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301245D12B00BAEE00A4CD90 /* LaunchScreen.storyboard */; };
+		301245DE2B00BAEE00A4CD90 /* koko_homeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245DD2B00BAEE00A4CD90 /* koko_homeworkTests.swift */; };
+		301245E82B00BAEE00A4CD90 /* koko_homeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245E72B00BAEE00A4CD90 /* koko_homeworkUITests.swift */; };
+		301245EA2B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245E92B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		301245DA2B00BAEE00A4CD90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301245B82B00BAEB00A4CD90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 301245BF2B00BAEB00A4CD90;
+			remoteInfo = "koko homework";
+		};
+		301245E42B00BAEE00A4CD90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301245B82B00BAEB00A4CD90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 301245BF2B00BAEB00A4CD90;
+			remoteInfo = "koko homework";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		301245C02B00BAEB00A4CD90 /* koko homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "koko homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		301245C32B00BAEB00A4CD90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		301245C52B00BAEB00A4CD90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		301245C72B00BAEB00A4CD90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		301245CA2B00BAEB00A4CD90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		301245CD2B00BAEB00A4CD90 /* koko_homework.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = koko_homework.xcdatamodel; sourceTree = "<group>"; };
+		301245CF2B00BAEE00A4CD90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		301245D22B00BAEE00A4CD90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		301245D42B00BAEE00A4CD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		301245D92B00BAEE00A4CD90 /* koko homeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "koko homeworkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		301245DD2B00BAEE00A4CD90 /* koko_homeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koko_homeworkTests.swift; sourceTree = "<group>"; };
+		301245E32B00BAEE00A4CD90 /* koko homeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "koko homeworkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		301245E72B00BAEE00A4CD90 /* koko_homeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koko_homeworkUITests.swift; sourceTree = "<group>"; };
+		301245E92B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koko_homeworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		301245BD2B00BAEB00A4CD90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301245D62B00BAEE00A4CD90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301245E02B00BAEE00A4CD90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		301245B72B00BAEB00A4CD90 = {
+			isa = PBXGroup;
+			children = (
+				301245C22B00BAEB00A4CD90 /* koko homework */,
+				301245DC2B00BAEE00A4CD90 /* koko homeworkTests */,
+				301245E62B00BAEE00A4CD90 /* koko homeworkUITests */,
+				301245C12B00BAEB00A4CD90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		301245C12B00BAEB00A4CD90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				301245C02B00BAEB00A4CD90 /* koko homework.app */,
+				301245D92B00BAEE00A4CD90 /* koko homeworkTests.xctest */,
+				301245E32B00BAEE00A4CD90 /* koko homeworkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		301245C22B00BAEB00A4CD90 /* koko homework */ = {
+			isa = PBXGroup;
+			children = (
+				301245C32B00BAEB00A4CD90 /* AppDelegate.swift */,
+				301245C52B00BAEB00A4CD90 /* SceneDelegate.swift */,
+				301245C72B00BAEB00A4CD90 /* ViewController.swift */,
+				301245C92B00BAEB00A4CD90 /* Main.storyboard */,
+				301245CF2B00BAEE00A4CD90 /* Assets.xcassets */,
+				301245D12B00BAEE00A4CD90 /* LaunchScreen.storyboard */,
+				301245D42B00BAEE00A4CD90 /* Info.plist */,
+				301245CC2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld */,
+			);
+			path = "koko homework";
+			sourceTree = "<group>";
+		};
+		301245DC2B00BAEE00A4CD90 /* koko homeworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				301245DD2B00BAEE00A4CD90 /* koko_homeworkTests.swift */,
+			);
+			path = "koko homeworkTests";
+			sourceTree = "<group>";
+		};
+		301245E62B00BAEE00A4CD90 /* koko homeworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				301245E72B00BAEE00A4CD90 /* koko_homeworkUITests.swift */,
+				301245E92B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift */,
+			);
+			path = "koko homeworkUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		301245BF2B00BAEB00A4CD90 /* koko homework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301245ED2B00BAEE00A4CD90 /* Build configuration list for PBXNativeTarget "koko homework" */;
+			buildPhases = (
+				301245BC2B00BAEB00A4CD90 /* Sources */,
+				301245BD2B00BAEB00A4CD90 /* Frameworks */,
+				301245BE2B00BAEB00A4CD90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "koko homework";
+			productName = "koko homework";
+			productReference = 301245C02B00BAEB00A4CD90 /* koko homework.app */;
+			productType = "com.apple.product-type.application";
+		};
+		301245D82B00BAEE00A4CD90 /* koko homeworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301245F02B00BAEE00A4CD90 /* Build configuration list for PBXNativeTarget "koko homeworkTests" */;
+			buildPhases = (
+				301245D52B00BAEE00A4CD90 /* Sources */,
+				301245D62B00BAEE00A4CD90 /* Frameworks */,
+				301245D72B00BAEE00A4CD90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301245DB2B00BAEE00A4CD90 /* PBXTargetDependency */,
+			);
+			name = "koko homeworkTests";
+			productName = "koko homeworkTests";
+			productReference = 301245D92B00BAEE00A4CD90 /* koko homeworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		301245E22B00BAEE00A4CD90 /* koko homeworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301245F32B00BAEE00A4CD90 /* Build configuration list for PBXNativeTarget "koko homeworkUITests" */;
+			buildPhases = (
+				301245DF2B00BAEE00A4CD90 /* Sources */,
+				301245E02B00BAEE00A4CD90 /* Frameworks */,
+				301245E12B00BAEE00A4CD90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301245E52B00BAEE00A4CD90 /* PBXTargetDependency */,
+			);
+			name = "koko homeworkUITests";
+			productName = "koko homeworkUITests";
+			productReference = 301245E32B00BAEE00A4CD90 /* koko homeworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		301245B82B00BAEB00A4CD90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					301245BF2B00BAEB00A4CD90 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					301245D82B00BAEE00A4CD90 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 301245BF2B00BAEB00A4CD90;
+					};
+					301245E22B00BAEE00A4CD90 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 301245BF2B00BAEB00A4CD90;
+					};
+				};
+			};
+			buildConfigurationList = 301245BB2B00BAEB00A4CD90 /* Build configuration list for PBXProject "koko homework" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 301245B72B00BAEB00A4CD90;
+			productRefGroup = 301245C12B00BAEB00A4CD90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				301245BF2B00BAEB00A4CD90 /* koko homework */,
+				301245D82B00BAEE00A4CD90 /* koko homeworkTests */,
+				301245E22B00BAEE00A4CD90 /* koko homeworkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		301245BE2B00BAEB00A4CD90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301245D32B00BAEE00A4CD90 /* LaunchScreen.storyboard in Resources */,
+				301245D02B00BAEE00A4CD90 /* Assets.xcassets in Resources */,
+				301245CB2B00BAEB00A4CD90 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301245D72B00BAEE00A4CD90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301245E12B00BAEE00A4CD90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		301245BC2B00BAEB00A4CD90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301245C82B00BAEB00A4CD90 /* ViewController.swift in Sources */,
+				301245CE2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld in Sources */,
+				301245C42B00BAEB00A4CD90 /* AppDelegate.swift in Sources */,
+				301245C62B00BAEB00A4CD90 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301245D52B00BAEE00A4CD90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301245DE2B00BAEE00A4CD90 /* koko_homeworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301245DF2B00BAEE00A4CD90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301245EA2B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift in Sources */,
+				301245E82B00BAEE00A4CD90 /* koko_homeworkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		301245DB2B00BAEE00A4CD90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 301245BF2B00BAEB00A4CD90 /* koko homework */;
+			targetProxy = 301245DA2B00BAEE00A4CD90 /* PBXContainerItemProxy */;
+		};
+		301245E52B00BAEE00A4CD90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 301245BF2B00BAEB00A4CD90 /* koko homework */;
+			targetProxy = 301245E42B00BAEE00A4CD90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		301245C92B00BAEB00A4CD90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301245CA2B00BAEB00A4CD90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		301245D12B00BAEE00A4CD90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301245D22B00BAEE00A4CD90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		301245EB2B00BAEE00A4CD90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		301245EC2B00BAEE00A4CD90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		301245EE2B00BAEE00A4CD90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83MAPZ6H3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "koko homework/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iresh.studio.koko-homework";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		301245EF2B00BAEE00A4CD90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83MAPZ6H3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "koko homework/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iresh.studio.koko-homework";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		301245F12B00BAEE00A4CD90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83MAPZ6H3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iresh.studio.koko-homeworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/koko homework.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/koko homework";
+			};
+			name = Debug;
+		};
+		301245F22B00BAEE00A4CD90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83MAPZ6H3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iresh.studio.koko-homeworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/koko homework.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/koko homework";
+			};
+			name = Release;
+		};
+		301245F42B00BAEE00A4CD90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83MAPZ6H3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iresh.studio.koko-homeworkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "koko homework";
+			};
+			name = Debug;
+		};
+		301245F52B00BAEE00A4CD90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83MAPZ6H3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iresh.studio.koko-homeworkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "koko homework";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		301245BB2B00BAEB00A4CD90 /* Build configuration list for PBXProject "koko homework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301245EB2B00BAEE00A4CD90 /* Debug */,
+				301245EC2B00BAEE00A4CD90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		301245ED2B00BAEE00A4CD90 /* Build configuration list for PBXNativeTarget "koko homework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301245EE2B00BAEE00A4CD90 /* Debug */,
+				301245EF2B00BAEE00A4CD90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		301245F02B00BAEE00A4CD90 /* Build configuration list for PBXNativeTarget "koko homeworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301245F12B00BAEE00A4CD90 /* Debug */,
+				301245F22B00BAEE00A4CD90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		301245F32B00BAEE00A4CD90 /* Build configuration list for PBXNativeTarget "koko homeworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301245F42B00BAEE00A4CD90 /* Debug */,
+				301245F52B00BAEE00A4CD90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		301245CC2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				301245CD2B00BAEB00A4CD90 /* koko_homework.xcdatamodel */,
+			);
+			currentVersion = 301245CD2B00BAEB00A4CD90 /* koko_homework.xcdatamodel */;
+			path = koko_homework.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 301245B82B00BAEB00A4CD90 /* Project object */;
+}
