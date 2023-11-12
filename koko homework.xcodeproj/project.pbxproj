@@ -24,6 +24,7 @@
 		301246032B00D22A00A4CD90 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301246022B00D22A00A4CD90 /* Models.swift */; };
 		301246062B00D68200A4CD90 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 301246052B00D68200A4CD90 /* Alamofire */; };
 		301246092B00D77300A4CD90 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 301246082B00D77300A4CD90 /* PromiseKit */; };
+		3012460B2B013D3A00A4CD90 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012460A2B013D3A00A4CD90 /* Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		301245FB2B00C5BE00A4CD90 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
 		301246022B00D22A00A4CD90 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		3012460A2B013D3A00A4CD90 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				301245FB2B00C5BE00A4CD90 /* FriendListViewController.swift */,
 				301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */,
 				301246022B00D22A00A4CD90 /* Models.swift */,
+				3012460A2B013D3A00A4CD90 /* Styles.swift */,
 			);
 			path = "koko homework";
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				301245FC2B00C5BE00A4CD90 /* FriendListViewController.swift in Sources */,
 				301245C82B00BAEB00A4CD90 /* ViewController.swift in Sources */,
 				301245FE2B00CDBD00A4CD90 /* FriendListViewModel.swift in Sources */,
+				3012460B2B013D3A00A4CD90 /* Styles.swift in Sources */,
 				301245CE2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld in Sources */,
 				301245C42B00BAEB00A4CD90 /* AppDelegate.swift in Sources */,
 				301245C62B00BAEB00A4CD90 /* SceneDelegate.swift in Sources */,
