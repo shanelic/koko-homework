@@ -17,6 +17,8 @@
 		301245DE2B00BAEE00A4CD90 /* koko_homeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245DD2B00BAEE00A4CD90 /* koko_homeworkTests.swift */; };
 		301245E82B00BAEE00A4CD90 /* koko_homeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245E72B00BAEE00A4CD90 /* koko_homeworkUITests.swift */; };
 		301245EA2B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245E92B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift */; };
+		301245F82B00BF2E00A4CD90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 301245F72B00BF2E00A4CD90 /* SnapKit */; };
+		301245FA2B00BF2E00A4CD90 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301245F82B00BF2E00A4CD90 /* SnapKit in Frameworks */,
+				301245FA2B00BF2E00A4CD90 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,10 @@
 			dependencies = (
 			);
 			name = "koko homework";
+			packageProductDependencies = (
+				301245F72B00BF2E00A4CD90 /* SnapKit */,
+				301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */,
+			);
 			productName = "koko homework";
 			productReference = 301245C02B00BAEB00A4CD90 /* koko homework.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 301245B72B00BAEB00A4CD90;
+			packageReferences = (
+				301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 301245C12B00BAEB00A4CD90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -611,6 +622,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		301245F72B00BF2E00A4CD90 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		301245CC2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld */ = {
