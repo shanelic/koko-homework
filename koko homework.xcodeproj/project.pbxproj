@@ -22,6 +22,7 @@
 		301245FC2B00C5BE00A4CD90 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245FB2B00C5BE00A4CD90 /* FriendListViewController.swift */; };
 		301245FE2B00CDBD00A4CD90 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */; };
 		301246032B00D22A00A4CD90 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301246022B00D22A00A4CD90 /* Models.swift */; };
+		301246062B00D68200A4CD90 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 301246052B00D68200A4CD90 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301246062B00D68200A4CD90 /* Alamofire in Frameworks */,
 				301245F82B00BF2E00A4CD90 /* SnapKit in Frameworks */,
 				301245FA2B00BF2E00A4CD90 /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -162,6 +164,7 @@
 			packageProductDependencies = (
 				301245F72B00BF2E00A4CD90 /* SnapKit */,
 				301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */,
+				301246052B00D68200A4CD90 /* Alamofire */,
 			);
 			productName = "koko homework";
 			productReference = 301245C02B00BAEB00A4CD90 /* koko homework.app */;
@@ -237,6 +240,7 @@
 			mainGroup = 301245B72B00BAEB00A4CD90;
 			packageReferences = (
 				301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				301246042B00D68200A4CD90 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 301245C12B00BAEB00A4CD90 /* Products */;
 			projectDirPath = "";
@@ -644,6 +648,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		301246042B00D68200A4CD90 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -656,6 +668,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		301246052B00D68200A4CD90 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 301246042B00D68200A4CD90 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
