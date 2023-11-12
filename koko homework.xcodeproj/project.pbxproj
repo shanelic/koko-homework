@@ -23,6 +23,7 @@
 		301245FE2B00CDBD00A4CD90 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */; };
 		301246032B00D22A00A4CD90 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301246022B00D22A00A4CD90 /* Models.swift */; };
 		301246062B00D68200A4CD90 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 301246052B00D68200A4CD90 /* Alamofire */; };
+		301246092B00D77300A4CD90 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 301246082B00D77300A4CD90 /* PromiseKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301246062B00D68200A4CD90 /* Alamofire in Frameworks */,
+				301246092B00D77300A4CD90 /* PromiseKit in Frameworks */,
 				301245F82B00BF2E00A4CD90 /* SnapKit in Frameworks */,
 				301245FA2B00BF2E00A4CD90 /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -165,6 +167,7 @@
 				301245F72B00BF2E00A4CD90 /* SnapKit */,
 				301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */,
 				301246052B00D68200A4CD90 /* Alamofire */,
+				301246082B00D77300A4CD90 /* PromiseKit */,
 			);
 			productName = "koko homework";
 			productReference = 301245C02B00BAEB00A4CD90 /* koko homework.app */;
@@ -241,6 +244,7 @@
 			packageReferences = (
 				301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				301246042B00D68200A4CD90 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				301246072B00D77300A4CD90 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = 301245C12B00BAEB00A4CD90 /* Products */;
 			projectDirPath = "";
@@ -656,6 +660,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		301246072B00D77300A4CD90 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -673,6 +685,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 301246042B00D68200A4CD90 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		301246082B00D77300A4CD90 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 301246072B00D77300A4CD90 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 
