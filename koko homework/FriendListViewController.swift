@@ -328,6 +328,85 @@ class FriendListViewController: UIViewController {
 
 extension FriendListViewController: FriendListDelegate {
     func fetchedData(user: User?) {
+        usernameLabel.text = user?.name
+        kokoID.text = "KOKO ID：\(user?.kokoid ?? "")"
+        
+        emptyView.isHidden = !viewModel.friendList.isEmpty
+        toolbar.isHidden = viewModel.friendList.isEmpty
+        friendList.isHidden = viewModel.friendList.isEmpty
+        
+        for subview in invitations.subviews {
+            subview.removeFromSuperview()
+        }
+        for (index, invitation) in viewModel.invitationList.enumerated() {
+            let invitationView = UIView()
+            invitationView.backgroundColor = .white
+            invitationView.layer.cornerRadius = 6
+            invitationView.layer.masksToBounds = false
+            invitationView.layer.shadowColor = UIColor.black10.cgColor
+            invitationView.layer.shadowOpacity = 1
+            invitationView.layer.shadowOffset = CGSize(width: 0, height: 4)
+            invitationView.layer.shadowRadius = 6
+            invitationView.layer.zPosition = 1
+            
+            let avatar = UIImageView(image: .imgFriendsFemaleDefault)
+            invitationView.addSubview(avatar)
+            avatar.snp.makeConstraints { make in
+                make.top.left.bottom.equalToSuperview().inset(15)
+                make.height.width.equalTo(40)
+            }
+            
+            let name = UILabel()
+            name.text = invitation.name
+            name.font = .systemFont(ofSize: 16, weight: .regular)
+            name.textColor = .greyishBrown
+            invitationView.addSubview(name)
+            name.snp.makeConstraints { make in
+                make.top.equalToSuperview().inset(14)
+                make.left.equalTo(avatar.snp.right).offset(15)
+            }
+            
+            let content = UILabel()
+            content.text = "邀請你成為好友：）"
+            content.font = .systemFont(ofSize: 13, weight: .regular)
+            content.textColor = .brownGrey
+            invitationView.addSubview(content)
+            content.snp.makeConstraints { make in
+                make.left.equalTo(avatar.snp.right).offset(15)
+                make.bottom.equalToSuperview().inset(14)
+            }
+            
+            let refuse = UIImageView(image: .btnFriendsDelet)
+            invitationView.addSubview(refuse)
+            refuse.snp.makeConstraints { make in
+                make.height.width.equalTo(30)
+                make.right.equalToSuperview().inset(15)
+                make.centerY.equalToSuperview()
+            }
+            
+            let accept = UIImageView(image: .btnFriendsAgree)
+            invitationView.addSubview(accept)
+            accept.snp.makeConstraints { make in
+                make.height.width.equalTo(30)
+                make.right.equalTo(refuse.snp.left).offset(-15)
+                make.centerY.equalToSuperview()
+            }
+            
+            invitations.addSubview(invitationView)
+            invitationView.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().inset(30)
+                make.top.equalToSuperview().inset(index * 80 - 10)
+            }
+        }
+        invitations.snp.updateConstraints { make in
+            if viewModel.invitationList.isEmpty {
+                make.height.equalTo(0)
+            } else {
+                make.height.equalTo(viewModel.invitationList.count * 80 - 10)
+            }
+        }
+        
+        friendList.reloadData()
     }
 }
 
