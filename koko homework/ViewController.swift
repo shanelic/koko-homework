@@ -55,17 +55,26 @@ class ViewController: UIViewController {
     }
     
     @objc private func performNoFriend() {
-        print("::: I really have no any friend.")
+        let vc = FriendListViewController(situation: .noFriend)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func performFriends() {
-        print("::: I have friends!")
+        let vc = FriendListViewController(situation: .friends)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func performFriendsAndInvitations() {
-        print("::: I have friends and alse invitations!!")
+        let vc = FriendListViewController(situation: .friendsWithInvitations)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
+}
+
+enum Situation {
+    case noFriend
+    case friends
+    case friendsWithInvitations
 }
 
 #Preview {
