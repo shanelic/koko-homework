@@ -406,6 +406,43 @@ extension FriendListViewController: FriendListDelegate {
             }
         }
         
+        if !viewModel.friendList.isEmpty {
+            let chatBadge = UIView()
+            chatBadge.layer.cornerRadius = 9
+            chatBadge.backgroundColor = .softPink
+            let label = UILabel()
+            label.text = " 99+ "
+            label.font = .systemFont(ofSize: 12, weight: .medium)
+            label.textColor = .white
+            chatBadge.addSubview(label)
+            label.snp.makeConstraints { make in
+                make.edges.equalToSuperview().inset(3)
+            }
+            chatsTab.addSubview(chatBadge)
+            chatBadge.snp.makeConstraints { make in
+                make.left.equalTo(chatsTab.snp.right)
+                make.centerY.equalTo(chatsTab.snp.top)
+            }
+            let invitationCount = viewModel.friendList.filter { $0.status == .invitationSent }.count
+            if invitationCount > 0 {
+                let friendBadge = UIView()
+                friendBadge.layer.cornerRadius = 9
+                friendBadge.backgroundColor = .softPink
+                let label = UILabel()
+                label.text = " \(invitationCount) "
+                label.font = .systemFont(ofSize: 12, weight: .medium)
+                label.textColor = .white
+                friendBadge.addSubview(label)
+                label.snp.makeConstraints { make in
+                    make.edges.equalToSuperview().inset(3)
+                }
+                friendsTab.addSubview(friendBadge)
+                friendBadge.snp.makeConstraints { make in
+                    make.centerX.equalTo(friendsTab.snp.right).offset(12)
+                    make.centerY.equalTo(friendsTab.snp.top)
+                }
+            }
+        }
         friendList.reloadData()
     }
 }
