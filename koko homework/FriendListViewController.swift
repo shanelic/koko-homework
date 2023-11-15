@@ -324,6 +324,11 @@ class FriendListViewController: UIViewController {
         table.allowsSelection = false
         return table
     }()
+    
+    @objc private func back() {
+        print("::: back tapped")
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension FriendListViewController: FriendListDelegate {
