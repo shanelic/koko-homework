@@ -25,6 +25,8 @@
 		301246062B00D68200A4CD90 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 301246052B00D68200A4CD90 /* Alamofire */; };
 		301246092B00D77300A4CD90 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 301246082B00D77300A4CD90 /* PromiseKit */; };
 		3012460B2B013D3A00A4CD90 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012460A2B013D3A00A4CD90 /* Styles.swift */; };
+		309DC8A42B051F660041DD63 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DC8A32B051F660041DD63 /* TabbarController.swift */; };
+		309DC8A62B0538920041DD63 /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DC8A52B0538920041DD63 /* FriendListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
 		301246022B00D22A00A4CD90 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		3012460A2B013D3A00A4CD90 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		309DC8A32B051F660041DD63 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		309DC8A52B0538920041DD63 /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +130,11 @@
 				301245D42B00BAEE00A4CD90 /* Info.plist */,
 				301245CC2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld */,
 				301245FB2B00C5BE00A4CD90 /* FriendListViewController.swift */,
+				309DC8A52B0538920041DD63 /* FriendListCell.swift */,
 				301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */,
 				301246022B00D22A00A4CD90 /* Models.swift */,
 				3012460A2B013D3A00A4CD90 /* Styles.swift */,
+				309DC8A32B051F660041DD63 /* TabbarController.swift */,
 			);
 			path = "koko homework";
 			sourceTree = "<group>";
@@ -299,7 +305,9 @@
 				301245CE2B00BAEB00A4CD90 /* koko_homework.xcdatamodeld in Sources */,
 				301245C42B00BAEB00A4CD90 /* AppDelegate.swift in Sources */,
 				301245C62B00BAEB00A4CD90 /* SceneDelegate.swift in Sources */,
+				309DC8A42B051F660041DD63 /* TabbarController.swift in Sources */,
 				301246032B00D22A00A4CD90 /* Models.swift in Sources */,
+				309DC8A62B0538920041DD63 /* FriendListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
