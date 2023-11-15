@@ -14,6 +14,7 @@ class FriendListViewModel {
     weak public var delegate: FriendListDelegate?
     
     private var friends: [Friend] = []
+    private var keyword: String = ""
     var friendList: [Friend] {
         friends
             .filter(\.isFriend)
@@ -68,6 +69,11 @@ class FriendListViewModel {
             }
         }
     }
+    
+    public func search(_ keyword: String) {
+        self.keyword = keyword
+    }
+    
     private func fetchUser() -> Promise<[User]> {
         Promise { seal in
             AF.request("https://dimanyen.github.io/man.json")

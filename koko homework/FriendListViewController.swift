@@ -406,6 +406,8 @@ extension FriendListViewController: FriendListDelegate {
             }
         }
         
+        friendList.reloadData()
+        
         if !viewModel.friendList.isEmpty {
             let chatBadge = UIView()
             chatBadge.layer.cornerRadius = 9
@@ -443,6 +445,13 @@ extension FriendListViewController: FriendListDelegate {
                 }
             }
         }
+    }
+}
+
+extension FriendListViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.search(searchText)
         friendList.reloadData()
     }
 }
