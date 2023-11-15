@@ -18,7 +18,6 @@
 		301245E82B00BAEE00A4CD90 /* koko_homeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245E72B00BAEE00A4CD90 /* koko_homeworkUITests.swift */; };
 		301245EA2B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245E92B00BAEE00A4CD90 /* koko_homeworkUITestsLaunchTests.swift */; };
 		301245F82B00BF2E00A4CD90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 301245F72B00BF2E00A4CD90 /* SnapKit */; };
-		301245FA2B00BF2E00A4CD90 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */; };
 		301245FC2B00C5BE00A4CD90 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245FB2B00C5BE00A4CD90 /* FriendListViewController.swift */; };
 		301245FE2B00CDBD00A4CD90 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301245FD2B00CDBD00A4CD90 /* FriendListViewModel.swift */; };
 		301246032B00D22A00A4CD90 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301246022B00D22A00A4CD90 /* Models.swift */; };
@@ -45,6 +44,19 @@
 			remoteInfo = "koko homework";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		309DC8A22B0289A90041DD63 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		301245C02B00BAEB00A4CD90 /* koko homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "koko homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +89,6 @@
 				301246062B00D68200A4CD90 /* Alamofire in Frameworks */,
 				301246092B00D77300A4CD90 /* PromiseKit in Frameworks */,
 				301245F82B00BF2E00A4CD90 /* SnapKit in Frameworks */,
-				301245FA2B00BF2E00A4CD90 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +177,7 @@
 				301245BC2B00BAEB00A4CD90 /* Sources */,
 				301245BD2B00BAEB00A4CD90 /* Frameworks */,
 				301245BE2B00BAEB00A4CD90 /* Resources */,
+				309DC8A22B0289A90041DD63 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,7 +186,6 @@
 			name = "koko homework";
 			packageProductDependencies = (
 				301245F72B00BF2E00A4CD90 /* SnapKit */,
-				301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */,
 				301246052B00D68200A4CD90 /* Alamofire */,
 				301246082B00D77300A4CD90 /* PromiseKit */,
 			);
@@ -689,11 +700,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		301245F92B00BF2E00A4CD90 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 301245F62B00BF2E00A4CD90 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		301246052B00D68200A4CD90 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
