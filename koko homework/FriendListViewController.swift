@@ -331,6 +331,20 @@ extension FriendListViewController: FriendListDelegate {
     }
 }
 
+extension FriendListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.friendList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath)
+        if let cell = cell as? FriendListCell {
+            cell.friend = viewModel.friendList[indexPath.row]
+        }
+        return cell
+    }
+}
+
 #Preview {
     FriendListViewController(situation: .friendsWithInvitations)
 }
