@@ -26,6 +26,7 @@ class FriendListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         viewModel.delegate = self
         viewModel.initial(situation: situation)
     }
@@ -33,6 +34,296 @@ class FriendListViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
+    private func setupUI() {
+        view.backgroundColor = .white
+        
+        navigationItem.setLeftBarButtonItems([
+            .init(image: .icNavPinkWithdraw.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(back)),
+            .init(image: .icNavPinkTransfer.withRenderingMode(.alwaysOriginal), style: .plain, target: nil, action: nil),
+        ], animated: true)
+        navigationItem.setRightBarButtonItems([
+            .init(image: .icNavPinkScan.withRenderingMode(.alwaysOriginal), style: .plain, target: nil, action: nil)
+        ], animated: true)
+        navigationItem.titleView?.tintColor = .hotPink
+        
+        view.addSubview(topView)
+        topView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.left.right.equalToSuperview()
+        }
+        
+        let profileView = UIView()
+        topView.addSubview(profileView)
+        profileView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+            make.left.right.equalToSuperview().inset(30)
+        }
+        
+        let avatarView = UIImageView(image: .imgFriendsFemaleDefault)
+        profileView.addSubview(avatarView)
+        avatarView.snp.makeConstraints { make in
+            make.centerY.right.equalToSuperview()
+            make.height.equalTo(54)
+            make.width.equalTo(52)
+            make.top.bottom.equalToSuperview()
+        }
+        
+        let userInfo = UIView()
+        profileView.addSubview(userInfo)
+        userInfo.snp.makeConstraints { make in
+            make.bottom.left.equalToSuperview()
+        }
+        
+        userInfo.addSubview(usernameLabel)
+        usernameLabel.snp.makeConstraints { make in
+            make.top.left.equalToSuperview()
+        }
+        
+        userInfo.addSubview(kokoID)
+        kokoID.snp.makeConstraints { make in
+            make.bottom.left.equalToSuperview()
+            make.top.equalTo(usernameLabel.snp.bottom).offset(8)
+        }
+        
+        let kokoIDIcon = UIImageView(image: .init(systemName: "chevron.right"))
+        kokoIDIcon.tintColor = .greyishBrown
+        userInfo.addSubview(kokoIDIcon)
+        kokoIDIcon.snp.makeConstraints { make in
+            make.height.centerY.equalTo(kokoID)
+            make.left.equalTo(kokoID.snp.right).offset(4)
+        }
+        
+        topView.addSubview(invitations)
+        invitations.snp.makeConstraints { make in
+            make.top.equalTo(profileView.snp.bottom).offset(25)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(0)
+        }
+        
+        let tabs = UIView()
+        topView.addSubview(tabs)
+        tabs.snp.makeConstraints { make in
+            make.top.equalTo(invitations.snp.bottom).offset(15)
+            make.left.right.equalToSuperview().inset(32)
+            make.bottom.equalToSuperview()
+        }
+        
+        tabs.addSubview(friendsTab)
+        friendsTab.snp.makeConstraints { make in
+            make.top.left.bottom.equalToSuperview()
+        }
+        
+        let friendsTitle = UILabel()
+        friendsTitle.text = "好友"
+        friendsTitle.font = .systemFont(ofSize: 13, weight: .medium)
+        friendsTitle.textColor = .greyishBrown
+        friendsTab.addSubview(friendsTitle)
+        friendsTitle.snp.makeConstraints { make in
+            make.top.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().inset(10)
+        }
+        
+        let friendsBottomBar = UIView()
+        friendsBottomBar.backgroundColor = .hotPink
+        friendsBottomBar.layer.cornerRadius = 2
+        friendsTab.addSubview(friendsBottomBar)
+        friendsBottomBar.snp.makeConstraints { make in
+            make.top.equalTo(friendsTitle.snp.bottom).offset(6)
+            make.left.right.equalTo(friendsTitle).inset(3)
+            make.height.equalTo(4)
+        }
+        
+        tabs.addSubview(chatsTab)
+        chatsTab.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.left.equalTo(friendsTab.snp.right).offset(36)
+        }
+        
+        let chatsTitle = UILabel()
+        chatsTitle.text = "聊天"
+        chatsTitle.font = .systemFont(ofSize: 13, weight: .regular)
+        chatsTitle.textColor = .greyishBrown
+        chatsTab.addSubview(chatsTitle)
+        chatsTitle.snp.makeConstraints { make in
+            make.top.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().inset(10)
+        }
+        
+        view.addSubview(toolbar)
+        toolbar.isHidden = true
+        toolbar.snp.makeConstraints { make in
+            make.top.equalTo(topView.snp.bottom).offset(8)
+            make.right.equalToSuperview().inset(30)
+            make.left.equalToSuperview().inset(22)
+        }
+        
+        let searchbar = UISearchBar()
+        searchbar.placeholder = "想轉一筆給誰呢？"
+        searchbar.searchTextField.font = .systemFont(ofSize: 14, weight: .regular)
+        searchbar.enablesReturnKeyAutomatically = false
+        searchbar.backgroundImage = UIImage()
+        searchbar.delegate = self
+        toolbar.addSubview(searchbar)
+        searchbar.snp.makeConstraints { make in
+            make.top.bottom.left.equalToSuperview()
+        }
+        
+        let addFriend = UIButton()
+        addFriend.setImage(.icBtnAddFriends, for: .normal)
+        toolbar.addSubview(addFriend)
+        addFriend.snp.makeConstraints { make in
+            make.height.width.equalTo(24)
+            make.centerY.right.equalToSuperview()
+            make.left.equalTo(searchbar.snp.right).offset(15)
+        }
+        
+        view.addSubview(friendList)
+        friendList.snp.makeConstraints { make in
+            make.top.equalTo(toolbar.snp.bottom).offset(10)
+            make.left.right.equalToSuperview().inset(20)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        
+        view.addSubview(emptyView)
+        emptyView.snp.makeConstraints { make in
+            make.top.equalTo(topView.snp.bottom)
+            make.left.right.equalToSuperview()
+            if let height = tabBarController?.tabBar.frame.height {
+                make.bottom.equalToSuperview().inset(height + 16)
+            } else {
+                make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(5)
+            }
+        }
+    }
+    
+    lazy var topView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 252 / 255.0, alpha: 1.0)
+        return view
+    }()
+    
+    lazy private var usernameLabel: UILabel = {
+        var label = UILabel()
+        label.font = .systemFont(ofSize: 17, weight: .medium)
+        label.textColor = .greyishBrown
+        label.text = "姓名"
+        return label
+    }()
+    
+    lazy private var kokoID: UILabel = {
+        let label = UILabel()
+        label.text = "設定 KOKO ID"
+        label.font = .systemFont(ofSize: 13, weight: .regular)
+        label.textColor = .greyishBrown
+        return label
+    }()
+    
+    lazy var invitations: UIView = {
+        return UIView()
+    }()
+    
+    lazy var emptyView: UIView = {
+        let view = UIView()
+        
+        let image = UIImageView(image: .imgFriendsEmpty)
+        image.contentMode = .scaleAspectFit
+        view.addSubview(image)
+        image.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(30)
+            make.left.right.equalToSuperview().inset(65)
+        }
+        
+        let label = UILabel()
+        label.text = "就從加好友開始吧：）"
+        label.textColor = .greyishBrown
+        label.font = .systemFont(ofSize: 21, weight: .medium)
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.top.equalTo(image.snp.bottom).offset(41)
+            make.centerX.equalToSuperview()
+        }
+        
+        let content = UILabel()
+        content.text = "與好友們一起用 KOKO 聊起來！\n還能互相收付款、發紅包喔：）"
+        content.textAlignment = .center
+        content.numberOfLines = 0
+        content.font = .systemFont(ofSize: 14, weight: .regular)
+        content.textColor = .brownGrey
+        view.addSubview(content)
+        content.snp.makeConstraints { make in
+            make.top.equalTo(label.snp.bottom).offset(8)
+            make.centerX.equalToSuperview()
+        }
+        
+        let addFriendButton = UIView()
+        addFriendButton.backgroundColor = .frogGreen
+        addFriendButton.layer.cornerRadius = 20
+        addFriendButton.layer.shadowColor = UIColor.appleGreen40.cgColor
+        addFriendButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        addFriendButton.layer.shadowRadius = 20
+        addFriendButton.layer.masksToBounds = false
+        view.addSubview(addFriendButton)
+        addFriendButton.snp.makeConstraints { make in
+            make.top.equalTo(content.snp.bottom).offset(25)
+            make.left.right.equalToSuperview().inset(92)
+        }
+        
+        let buttonTitle = UILabel()
+        buttonTitle.text = "加好友"
+        buttonTitle.textColor = .white
+        buttonTitle.font = .systemFont(ofSize: 16, weight: .medium)
+        addFriendButton.addSubview(buttonTitle)
+        buttonTitle.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview().inset(9)
+            make.center.equalToSuperview()
+        }
+        
+        let buttonIcon = UIImageView(image: .icAddFriendWhite)
+        addFriendButton.addSubview(buttonIcon)
+        buttonIcon.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.right.equalToSuperview().inset(8)
+            make.height.width.equalTo(24)
+        }
+        
+        let findingHint = UILabel()
+        let attributedString = NSMutableAttributedString(string: "幫助好友更快找到你？設定 KOKO ID")
+        attributedString.addAttribute(.foregroundColor, value: UIColor.brownGrey, range: NSRange(location: 0, length: 10))
+        attributedString.addAttribute(.foregroundColor, value: UIColor.hotPink, range: NSRange(location: 10, length: 10))
+        attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 10, length: 10))
+        findingHint.attributedText = attributedString
+        findingHint.font = .systemFont(ofSize: 13, weight: .regular)
+        view.addSubview(findingHint)
+        findingHint.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(8)
+            make.centerX.equalToSuperview()
+        }
+        
+        return view
+    }()
+    
+    lazy var friendsTab: UIView = {
+        return UIView()
+    }()
+    
+    lazy var chatsTab: UIView = {
+        return UIView()
+    }()
+    
+    lazy var toolbar: UIView = {
+        return UIView()
+    }()
+    
+    lazy var friendList: UITableView = {
+        let table = UITableView()
+        table.separatorInset.left = 85
+        table.dataSource = self
+        table.register(FriendListCell.self, forCellReuseIdentifier: "FriendCell")
+        table.rowHeight = 60
+        table.allowsSelection = false
+        return table
+    }()
 }
 
 extension FriendListViewController: FriendListDelegate {
