@@ -486,6 +486,20 @@ extension FriendListViewController: FriendListDelegate {
 
 extension FriendListViewController: UISearchBarDelegate {
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        topView.isHidden = true
+        toolbar.snp.updateConstraints { make in
+            make.top.equalTo(topView.snp.bottom).offset(-topView.frame.height)
+        }
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        topView.isHidden = false
+        toolbar.snp.updateConstraints { make in
+            make.top.equalTo(topView.snp.bottom).offset(8)
+        }
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
     }
