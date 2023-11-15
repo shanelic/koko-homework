@@ -13,8 +13,9 @@ class FriendListViewController: UIViewController {
     
     let situation: Situation
     let viewModel = FriendListViewModel()
-
-
+    
+    var expandingInvitations: Bool = true
+    
     init(situation: Situation) {
         self.situation = situation
         super.init(nibName: nil, bundle: nil)
@@ -402,6 +403,8 @@ extension FriendListViewController: FriendListDelegate {
                 make.left.right.equalToSuperview().inset(30)
                 make.top.equalToSuperview().inset(index * 80 - 10)
             }
+            
+            invitations.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleExpandingInvitations)))
         }
         invitations.snp.updateConstraints { make in
             if viewModel.invitationList.isEmpty {
@@ -448,6 +451,34 @@ extension FriendListViewController: FriendListDelegate {
                     make.centerX.equalTo(friendsTab.snp.right).offset(12)
                     make.centerY.equalTo(friendsTab.snp.top)
                 }
+            }
+        }
+    }
+    
+    @objc func toggleExpandingInvitations() {
+        expandingInvitations.toggle()
+        for (index, invitation) in invitations.subviews.enumerated() {
+            if index == 0 {
+                invitation.layer.zPosition = 10
+                continue
+            }
+            invitation.layer.zPosition = !expandingInvitations ? 1 : CGFloat(-10 * index)
+            invitation.transform = CGAffineTransform(scaleX: expandingInvitations ? 1 : CGFloat(0.9), y: expandingInvitations ? 1 : CGFloat(0.9))
+            invitation.snp.updateConstraints { make in
+                if expandingInvitations {
+                    make.top.equalToSuperview().inset(index * 80 - 10)
+                } else {
+                    make.top.equalToSuperview().inset(index * 10)
+                }
+            }
+        }
+        invitations.snp.updateConstraints { make in
+            if viewModel.invitationList.isEmpty {
+                make.height.equalTo(0)
+            } else if expandingInvitations {
+                make.height.equalTo(viewModel.invitationList.count * 80 - 10)
+            } else {
+                make.height.equalTo(80 + viewModel.invitationList.count * 10)
             }
         }
     }
