@@ -70,5 +70,5 @@ class ViewController: UIViewController {
 
 #Preview {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    return storyboard.instantiateViewController(withIdentifier: "ViewController")
+    return storyboard.instantiateViewController(withIdentifier: "root")
 }
