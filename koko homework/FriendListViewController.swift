@@ -331,7 +331,6 @@ class FriendListViewController: UIViewController {
     }()
     
     @objc private func back() {
-        print("::: back tapped")
         navigationController?.popViewController(animated: true)
     }
     
@@ -460,6 +459,9 @@ extension FriendListViewController: FriendListDelegate {
                     make.centerY.equalTo(friendsTab.snp.top)
                 }
             }
+        }
+        if expandingInvitations {
+            toggleExpandingInvitations()
         }
         friendList.refreshControl?.endRefreshing()
     }
