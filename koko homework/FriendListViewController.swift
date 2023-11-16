@@ -186,6 +186,10 @@ class FriendListViewController: UIViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        friendList.refreshControl = refreshControl
+        
         view.addSubview(emptyView)
         emptyView.snp.makeConstraints { make in
             make.top.equalTo(topView.snp.bottom)
@@ -330,6 +334,10 @@ class FriendListViewController: UIViewController {
         print("::: back tapped")
         navigationController?.popViewController(animated: true)
     }
+    
+    @objc private func refresh() {
+        viewModel.initial(situation: situation)
+    }
 }
 
 extension FriendListViewController: FriendListDelegate {
@@ -453,6 +461,7 @@ extension FriendListViewController: FriendListDelegate {
                 }
             }
         }
+        friendList.refreshControl?.endRefreshing()
     }
     
     @objc func toggleExpandingInvitations() {
